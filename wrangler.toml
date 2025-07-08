@@ -6,6 +6,9 @@ ip = "0.0.0.0"
 port = 8787
 local_protocol = "http"
 
+[assets]
+directory = "./dist"
+
 [env.vars]
 CUSTOM_DOMAIN = "0x0e.top"
 
@@ -15,7 +18,7 @@ TARGET_UPSTREAM = "https://registry-1.docker.io"
 CUSTOM_DOMAIN = "0x0e.top"
 
 [env.production]
-name = "cloudflare-docker-proxy"
+name = "sparrowhub"
 routes = [
   { pattern = "docker.0x0e.top", custom_domain = true },
   { pattern = "quay.0x0e.top", custom_domain = true },
@@ -31,7 +34,7 @@ MODE = "production"
 TARGET_UPSTREAM = ""
 
 [env.staging]
-name = "cloudflare-docker-proxy-staging"
+name = "sparrowhub-staging"
 # route = { pattern = "docker-staging.0x0e.top", custom_domain = true }
 
 [env.staging.vars]
