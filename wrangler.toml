@@ -30,6 +30,7 @@ routes = [
 
 [env.production.vars]
 MODE = "production"
+CUSTOM_DOMAIN = "0x0e.top"
 TARGET_UPSTREAM = ""
 
 [env.staging]
@@ -38,4 +39,5 @@ name = "sparrowhub-staging"
 
 [env.staging.vars]
 MODE = "staging"
+CUSTOM_DOMAIN = "0x0e.top"
 TARGET_UPSTREAM = ""
